@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1.html">
 <head>
 
     <meta charset="UTF-8" >
-    <link rel="stylesheet" href="webjars/bootstrap/5.3.8/css/bootstrap.min.css/">
-    <script src="webjars/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="webjars/bootstrap-icons/1.13.1/font/bootstrap-icons.css">
     <title>Title</title>
 </head>
 <body>
+<div layout:fragment="content">
     <div>
         <div class="card m-2">
             <div class="card-header">Liste Patients</div>
@@ -45,12 +45,16 @@
                         <a th:href="@{index(page=${c.index},keyword=${keyword})}"
                            th:text="${c.index+1}"
                            th:class="${c.index==currentPage? 'btn btn-info ms-1': 'btn btn-outline-info ms-1'}"
-                           ></a>
+                        ></a>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+
+</div>
+
+
 
 
 
