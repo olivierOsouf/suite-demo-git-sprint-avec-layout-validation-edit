@@ -16,9 +16,10 @@ public class DemoGitSpringApplication {
     @Bean
     CommandLineRunner commandLineRunner(PatientRepository patientRepository) {
         return args -> {
-            patientRepository.save(Patient.builder()
-                    .nom("Liolios").build());
-            //patientRepository.save(Patient.builder().nom("Dauphin").build());
+            //patientRepository.save(Patient.builder().nom("IoannisLiolios").build());
+            patientRepository.save(Patient.builder().nom("EricDauphin").build());
+            //patientRepository.save(Patient.builder().nom("Giovani").build());
+
         };
     }
 }
