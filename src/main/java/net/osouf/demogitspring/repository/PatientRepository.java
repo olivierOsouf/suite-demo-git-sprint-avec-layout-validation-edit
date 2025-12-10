@@ -19,4 +19,5 @@ public interface PatientRepository extends JpaRepository<Patient, Long> {
     PageImpl<Patient> chercher(@Param("x") String keyword, Pageable pageable);
 
 
+    List<Patient> id(Long id);
 }
